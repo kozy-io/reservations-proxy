@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body style="margin: 0px">
+    <div>
+    <div class="heading" style="margin-top: 10px">
+      <div class="search">
+        <div className="logo">
+            <img src="logo.png" height="45px" />
+        </div>
+        <div class="searchBar">
+          <input type="text" placeholder="Search">
+        </div>
+      </div>
+      <div class="navigation">
+        <a href="https://www.airbnb.com/login?redirect_url=%2Fbecome-a-host%2Froom"><button class="nav">Become a Host</button></a>
+        <button class="nav">Help</button>
+        <button class="nav">Sign up</button>
+        <button class="nav">Log in</button>
+      </div>
+    </div>
+    <div id="photos"></div>
+    <div class="content">
+      <div id="listing"></div>
+      <div id="app"></div>
+    </div>
+  </div>
+
+    <script src="http://localhost:3001/listing/bundle.js"></script>
+    <script src="photos.js"></script>
+    <script src="listing.js"></script>
+  </body>
+</html>
