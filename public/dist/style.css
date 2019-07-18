@@ -1,19 +1,42 @@
+body {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+}
+
+span {
+  cursor: grab;
+}
 
 .content {
   display: grid;
-  grid-template-columns: 60% 30%;
-  grid-column-gap: 2em;
+  grid-template-columns: 60% 40%;
+  grid-column-gap: 1em;
   /* grid-template-rows: 100px 10px; */
 }
 
 #app {
-  margin-top: 70px;
+  margin-top: 70px; 
+  top: 20px;
+  position: -webkit-sticky !important;
   position: sticky;
+  /* height: 50vh; */
+  align-self: flex-start;
 }
 
 #listing {
 }
 
+#rootReview {
+  margin-left: 45px;
+}
+
+#neighborhood {
+  margin-left: 60px;
+}
+
+.left {
+  display: grid;
+  padding: 1em;
+}
 
 .heading {
   display: grid;
@@ -42,7 +65,7 @@ input[type=text] {
   border-radius: 4px !important;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
   height: 25px !important;
-  width: 200px;
+  width: 300px;
   font-size: 16px;
   font-weight: 600;
   padding: 10px;
@@ -50,7 +73,7 @@ input[type=text] {
 }
 
 input[type=text]:focus {
-  width: 400px;
+  width: 450px;
   outline: none;
   transition: 300ms ease-in !important;
 
@@ -68,7 +91,26 @@ input[type=text]:focus {
   color: #484848;
 }
 
+.recommended {
+  margin-left: 60px;
+}
+
 .nav:hover {
   border-bottom: 1px solid #484848;
   cursor: grab;
+  text-decoration: none;
+}
+
+.footer {
+  border-top: 1px solid #eeeeee;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  padding-left: 67px;
+  margin-top: 50px;
+  padding-top: 20px;
+  margin-bottom: 50px;
+  font-size: 12px;
+  color: var(--color-text-muted, #767676) !important;
+  font-family: var(--font-font_family, Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif) !important;
+  text-decoration: var(--font-link-text-decoration, none) !important;
 }

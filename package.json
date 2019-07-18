@@ -1,0 +1,31 @@
+{
+  "name": "guestly_proxyserver_kat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "expres": "^0.0.5",
+    "express": "^4.17.1",
+    "http-proxy": "^1.17.0",
+    "http-proxy-middleware": "^0.19.1",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guest-ly/guestly_proxyserver_kat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guest-ly/guestly_proxyserver_kat/issues"
+  },
+  "homepage": "https://github.com/guest-ly/guestly_proxyserver_kat#readme"
+}
