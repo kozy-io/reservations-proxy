@@ -28,6 +28,10 @@ span {
   margin-left: 60px;
 }
 
+#photos {
+  overflow: hidden;
+}
+
 .left {
   display: grid;
   padding: 1em;
@@ -39,8 +43,12 @@ span {
   grid-column-gap: 2em;
   margin-bottom: 15px;
   margin-right: 150px;
-  resize: none;
-  position: fixed;
+  background: #FFFFFF;
+  height: 50px;
+}
+
+#photos {
+  background: #FFFFFF;
 }
 
 .searchBar {

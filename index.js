@@ -4,6 +4,7 @@ const apiProxy = httpProxy.createProxyServer();
 const serverPhotos = 'http://3.14.5.145';
 const serverCalendar = 'http://18.188.235.153';
 const serverListing = 'http://18.221.218.103';
+const serverReviews = 'http://ec2-13-57-195-146.us-west-1.compute.amazonaws.com';
 const app = express();
 const port = 3005;
 const bodyParser = require('body-parser');
@@ -59,5 +60,4 @@ app.all('/api/listings/photos/:listingID', (req, res) => {
     target: serverPhotos
   });
 })
-
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
