@@ -10,19 +10,14 @@ span {
   display: grid;
   grid-template-columns: 60% 40%;
   grid-column-gap: 1em;
-  /* grid-template-rows: 100px 10px; */
 }
 
-#app {
+#reservations {
   margin-top: 70px; 
   top: 20px;
   position: -webkit-sticky !important;
   position: sticky;
-  /* height: 50vh; */
   align-self: flex-start;
-}
-
-#listing {
 }
 
 #rootReview {
@@ -44,10 +39,12 @@ span {
   grid-column-gap: 2em;
   margin-bottom: 15px;
   margin-right: 150px;
+  resize: none;
 }
 
 .searchBar {
   margin-left: 5px;
+  width: auto;
 }
 
 .search {
@@ -56,7 +53,8 @@ span {
   margin-left: 20px;
 }
 
-.navigation {
+.logo {
+  margin-top: 5px;
 }
 
 input[type=text] {
@@ -64,7 +62,7 @@ input[type=text] {
   border: 1px solid #EBEBEB !important;
   border-radius: 4px !important;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
-  height: 25px !important;
+  height: 30px !important;
   width: 300px;
   font-size: 16px;
   font-weight: 600;
@@ -76,12 +74,10 @@ input[type=text]:focus {
   width: 450px;
   outline: none;
   transition: 300ms ease-in !important;
-
 }
 
 .nav {
   font-size: 14px;
-  /* padding-right: 20px; */
   margin-right: 20px;
   padding-bottom: 15px;
   font-weight: 500;
@@ -99,6 +95,10 @@ input[type=text]:focus {
   border-bottom: 1px solid #484848;
   cursor: grab;
   text-decoration: none;
+}
+
+.nav:focus {
+  outline: none;
 }
 
 .footer {

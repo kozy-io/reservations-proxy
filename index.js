@@ -1,11 +1,9 @@
 const express = require('express');
 const httpProxy = require('http-proxy');
 const apiProxy = httpProxy.createProxyServer();
-const serverPhotos = 'http://localhost:3002';
-const serverCalendar = 'http://18.216.217.96';
-const serverListing = 'http://localhost:3000';
-const serverReviews = 'http://localhost:3004';
-const path = require('path');
+const serverPhotos = 'http://3.14.5.145';
+const serverCalendar = 'http://18.188.235.153';
+const serverListing = 'http://18.221.218.103';
 const app = express();
 const port = 3005;
 const bodyParser = require('body-parser');
@@ -61,16 +59,5 @@ app.all('/api/listings/photos/:listingID', (req, res) => {
     target: serverPhotos
   });
 })
-
-// reviews
-
-app.all('/api/reviews/:listingID', (req, res) => {
-  console.log('redirecting to reviews server');
-  
-  apiProxy.web(req, res, {
-    target: serverReviews
-  });
-})
-
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
