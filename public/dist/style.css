@@ -12,6 +12,17 @@ span {
   grid-column-gap: 1em;
 }
 
+.navigation {
+  width: 400px;
+  display: block;
+}
+
+@media (max-width: 0px) {
+  .navigation {
+     display: none;
+    }
+  }
+
 #reservations {
   margin-top: 70px; 
   top: 20px;
