@@ -14,12 +14,11 @@ span {
 
 .navigation {
   width: 400px;
-  display: block;
 }
 
-@media (max-width: 0px) {
+@media (max-width: 600px) {
   .navigation {
-     display: none;
+     visibility: hidden;
     }
   }
 
