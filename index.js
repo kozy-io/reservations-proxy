@@ -1,5 +1,6 @@
 const express = require('express');
 const httpProxy = require('http-proxy');
+require('newrelic');
 const apiProxy = httpProxy.createProxyServer();
 const serverPhotos = 'http://3.14.5.145';
 const serverCalendar = 'http://18.188.235.153';
@@ -13,47 +14,54 @@ app.use(bodyParser());
 app.use(morgan());
 app.use('/:listingID', express.static('./public/dist'));
 
-app.all('/listing/desc/:listingID', (req, res) => {
+
+app.all('/api/reservations/:listingID', (req, res) => {
   apiProxy.web(req, res, {
-    target: serverListing
+    target: 'http://127.0.0.1:3006'
   });
 })
 
-app.all('/listing/amenity/:listingID', (req, res) => {
-  apiProxy.web(req, res, {
-    target: serverListing
-  });
-})
+// app.all('/listing/desc/:listingID', (req, res) => {
+//   apiProxy.web(req, res, {
+//     target: serverListing
+//   });
+// })
 
-app.all('/listing/:listingID', (req, res) => {
-  apiProxy.web(req, res, {
-    target: serverCalendar
-  });
-})
+// app.all('/listing/amenity/:listingID', (req, res) => {
+//   apiProxy.web(req, res, {
+//     target: serverListing
+//   });
+// })
 
-app.all('/custom/month', (req, res) => {
-  apiProxy.web(req, res, {
-    target: serverCalendar
-  });
-})
+// app.all('/listing/:listingID', (req, res) => {
+//   apiProxy.web(req, res, {
+//     target: serverCalendar
+//   });
+// })
 
-app.all('/reserved/month', (req, res) => {
-  apiProxy.web(req, res, {
-    target: serverCalendar
-  });
-})
+// app.all('/custom/month', (req, res) => {
+//   apiProxy.web(req, res, {
+//     target: serverCalendar
+//   });
+// })
 
-app.all('/api/listings/photos/:listingID', (req, res) => {
-  apiProxy.web(req, res, {
-    target: serverPhotos
-  });
-})
+// app.all('/reserved/month', (req, res) => {
+//   apiProxy.web(req, res, {
+//     target: serverCalendar
+//   });
+// })
 
-app.all("/api/listings/photos/initial/:listingID", function(req, res) {
-  apiProxy.web(req, res, 
-    {target: serverPhotos
-  });
-});
+// app.all('/api/listings/photos/:listingID', (req, res) => {
+//   apiProxy.web(req, res, {
+//     target: serverPhotos
+//   });
+// })
+
+// app.all("/api/listings/photos/initial/:listingID", function(req, res) {
+//   apiProxy.web(req, res, 
+//     {target: serverPhotos
+//   });
+// });
 
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

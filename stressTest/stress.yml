@@ -1,0 +1,15 @@
+config:
+  target: 'http://localhost:3005'
+  processor: './artilleryFunc.js'
+  ensure:
+    p95: 3000
+  phases:
+    - duration: 60
+      arrivalRate: 300
+scenarios:
+  - flow:
+    - function: 'generateGetRequestData'
+    - get:
+        url: '/api/reservations/{{listingID}}'
+    - think: 10
+    count: 15
